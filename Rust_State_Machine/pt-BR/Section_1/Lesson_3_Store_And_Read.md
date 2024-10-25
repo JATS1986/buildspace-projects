@@ -97,7 +97,7 @@ Para tornar nosso módulo útil, precisamos ter pelo menos algumas funções que
     ```rust
     impl Pallet {
         pub fn balance(&self, who: &String) -> u128 {
-            *self.balances.get(&who).unwrap_or(&0)
+            *self.balances.get(who).unwrap_or(&0)
         }
     }
     ```
